@@ -1,0 +1,44 @@
+//Colors
+
+
+//Fonts
+$inter: 'Inter';
+$inter-light: 'Inter-ExtraLight';
+$inter-bold: 'Inter-Bold';
+$ptserif-regular: 'PTSerif-Regular';
+$ptserif-bold: 'PTSerif-Bold';
+
+@font-face {
+  font-family: 'PTSerif-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/PTSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PTSerif-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/PTSerif-Bold.ttf');
+  }
+
+@font-face {
+    font-family: 'Inter-ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/assets/fonts/Inter-ExtraLight.ttf');
+  }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/Inter-Bold.ttf');
+}

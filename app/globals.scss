@@ -1,0 +1,49 @@
+@import 'variables.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, p, button {
+    font-family: $ptserif-regular;
+}
+
+
+.tile-1:hover {
+    transform: scale(1.05);
+    transform-origin: center left;
+
+    .overlay-1 {
+        opacity: 1;
+    }
+}
+
+.tile-2:hover {
+    .overlay-2 {
+        opacity: 0.2;
+    }
+
+    h2 {
+        opacity: 1;
+    }
+}
+
+.tile-3:hover {
+    transform: scale(1.05);
+    transform-origin: center right;
+
+    .overlay-3 {
+        opacity: 1;
+    }
+}
+
+.menuIsOpen {
+    .menu {
+        transform: translateX(0);
+    }
+}
