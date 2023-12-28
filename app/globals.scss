@@ -13,7 +13,11 @@ h1, h2, p, button {
     font-family: $ptserif-regular;
 }
 
+h3 {
+    font-family: $inter-light;
+}
 
+//Banner
 .tile-1:hover {
     transform: scale(1.05);
     transform-origin: center left;
@@ -41,9 +45,41 @@ h1, h2, p, button {
         opacity: 1;
     }
 }
+//Nav
+
+nav {
+    li {
+        font-family: $ptserif-regular;
+        font-size: 18px;
+        letter-spacing: 2px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
 
 .menuIsOpen {
     .menu {
         transform: translateX(0);
     }
+}
+
+//Carousel 
+
+.slide:hover {
+    h1 {
+        opacity: 0;
+    }
+}
+
+//Contact 
+
+.letter {
+    letter-spacing: 4px;
+    font-size: 22px;
+}
+
+input {
+    border-color: #6F6F6F;
 }
