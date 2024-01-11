@@ -15,6 +15,10 @@ export default async function  Home() {
   return (
     <main className="">
       <Nav />
+      <section className='h-screen md:hidden flex flex-col justify-center items-center '>
+        <h1 className='text-3xl animate-fade-up animate-duration-700 animate-delay-300'>JAMES CONRAD</h1>
+        <h1 className='text-3xl animate-fade-up animate-duration-700 animate-delay-1000'>ARCHITECT</h1>
+      </section>
       <Banner projects={projectsData}/>
       <ProjectsComp projects={projectsData}/>
       <About />

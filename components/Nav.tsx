@@ -11,22 +11,22 @@ const toggleMenu = () => {
 
     return (
         <div className={`${openMenu ? 'menuIsOpen ' : ''}`}>
-            <button className='absolute top-20 left-20 z-20 text-white hover:bg-[#00000088] duration-500 p-2 2xl:text-black 2xl:hover:bg-[#00000055]' onClick={toggleMenu}>
+            <button className='absolute md:top-20 top-6 md:left-20 left-6 z-20 text-black md:text-white hover:bg-[#00000088] duration-500 p-2 2xl:text-black 2xl:hover:bg-[#00000055] text-xl md:text-base' onClick={toggleMenu}>
                 MENU
             </button>
-            <div className={`h-screen w-full flex justify-around items-center fixed menu top-0 left-0 z-20 p-10 -translate-x-full bg-white duration-700`}>
-                <button className='absolute top-20 left-20 z-20 hover:bg-[#00000050] duration-500 p-2' onClick={toggleMenu}>
+            <div className={`h-screen md:w-full flex justify-around items-center fixed menu top-0 left-0 z-20 p-10 -translate-x-full bg-[#e9e8e8] duration-700`}>
+                <button className='absolute md:top-20 top-6 md:left-20 left-6 z-20 text-xl md:text-base hover:bg-[#00000050] duration-500 p-2' onClick={toggleMenu}>
                     CLOSE
                 </button>
                 <nav className='w-[350px] flex justify-center items-center flex-col'>
                     <ul>
-                        <li className='mt-4'><a href="">HOME</a></li>
-                        <li className='mt-4'><a href="#projects" onClick={toggleMenu}>PROJECTS</a></li>
-                        <li className='mt-4'><a href="#about" onClick={toggleMenu}>ABOUT</a></li>
-                        <li className='mt-4'><a href="#contact" onClick={toggleMenu}>CONTACT</a></li>
+                        <li className='mt-4 text-xl'><a href="/">HOME</a></li>
+                        <li className='mt-4 text-xl'><a href="#projects" onClick={toggleMenu}>PROJECTS</a></li>
+                        <li className='mt-4 text-xl'><a href="#about" onClick={toggleMenu}>ABOUT</a></li>
+                        <li className='mt-4 text-xl'><a href="#contact" onClick={toggleMenu}>CONTACT</a></li>
                     </ul>
                 </nav>
-                <div className='grid grid-cols-3 gap-8'>
+                <div className='md:grid grid-cols-3 gap-8 hidden'>
                     <div 
                     className='bg-slate-400 h-[580px] w-[325px]'
                     style={{

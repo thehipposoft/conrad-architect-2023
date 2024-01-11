@@ -1,22 +1,24 @@
 import React from 'react';
 import { Project } from '@/src/types';
 import Image from 'next/image';
+import Gallery from './Gallery';
 
 type Props = {
     project: Project
 }
 
 const ProjectDetail = ({ project }:Props) => {
+
     return (
-        <div className='h-screen flex justify-center items-center'>
-            <div className='flex min-w-[1300px] justify-between mx-auto'>
-                <div className='w-[35%] flex flex-col justify-between my-4'>
-                    <div className=''>
+        <div className='h-screen flex md:justify-center md:items-center items-start'>
+            <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[40%] md:mt-0'>
+                <div className='md:w-[35%] flex flex-col md:justify-between mb-6 animate-fade animate-duration-1000 animate-ease-in animate-delay-100 animate-once'>
+                    <div className='pl-6 md:pl-0'>
                         <h3 className='text-sm'>PROJECT</h3>
                         <h1 className='py-1 text-lg uppercase'>{project.title}</h1>
                         <button className='hover:underline duration-300'><h3>Discover</h3></button>
                     </div>
-                    <div className='flex justify-between'>
+                    <div className='md:flex justify-between hidden'>
                         <div>
                             <h3 className='text-sm'>CATEGORY</h3>
                             <p>{project.service}</p>
@@ -27,13 +29,23 @@ const ProjectDetail = ({ project }:Props) => {
                         </div>
                     </div>
                 </div>
-                <div className='relative w-[55%] h-[420px]'>
-                    <Image 
-                        src={project.main_image} 
-                        alt={`${project.title} main image`} 
-                        fill
-                    />
-                </div>
+                    <div className='relative md:w-[55%] w-screen md:h-[420px] h-[375px] animate-fade-left animate-duration-1000 animate-delay-700 animate-once'>
+                        <Image 
+                            src={project.main_image} 
+                            alt={`${project.title} main image`} 
+                            fill
+                        />
+                    </div>
+                <div className='flex justify-between md:hidden px-6 pt-12'>
+                        <div>
+                            <h3 className='text-sm'>CATEGORY</h3>
+                            <p>{project.service}</p>
+                        </div>
+                        <div>
+                            <h3 className='text-sm'>LOCATION</h3>
+                            <p>{project.location}</p>
+                        </div>
+                    </div>
             </div>
         </div>
     );
