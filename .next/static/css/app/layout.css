@@ -586,8 +586,8 @@ video {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
-.mt-16 {
-  margin-top: 4rem;
+.mt-12 {
+  margin-top: 3rem;
 }
 .mt-2 {
   margin-top: 0.5rem;
@@ -652,6 +652,9 @@ video {
 .w-\[75\%\] {
   width: 75%;
 }
+.w-\[98vw\] {
+  width: 98vw;
+}
 .w-full {
   width: 100%;
 }
@@ -712,6 +715,19 @@ video {
 }
 .animate-fade-left {
   animation: fade-left 1s both;
+}
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fade-right {
+  animation: fade-right 1s both;
 }
 @keyframes fade-up {
   0% {
@@ -804,6 +820,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
+.bg-cover {
+  background-size: cover;
+}
 .bg-center {
   background-position: center;
 }
@@ -850,6 +869,9 @@ video {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+.pl-2 {
+  padding-left: 0.5rem;
+}
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -873,6 +895,10 @@ video {
 }
 .text-center {
   text-align: center;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -922,9 +948,6 @@ video {
 .duration-700 {
   transition-duration: 700ms;
 }
-.animate-delay-100 {
-  animation-delay: 100ms;
-}
 .animate-delay-1000 {
   animation-delay: 1000ms;
 }
@@ -937,11 +960,83 @@ video {
 .animate-delay-700 {
   animation-delay: 700ms;
 }
+.animate-delay-\[1000ms\] {
+  animation-delay: 1000ms;
+}
+.animate-delay-\[1100ms\] {
+  animation-delay: 1100ms;
+}
+.animate-delay-\[1200ms\] {
+  animation-delay: 1200ms;
+}
+.animate-delay-\[1300ms\] {
+  animation-delay: 1300ms;
+}
+.animate-delay-\[1400ms\] {
+  animation-delay: 1400ms;
+}
+.animate-delay-\[1500ms\] {
+  animation-delay: 1500ms;
+}
+.animate-delay-\[1600ms\] {
+  animation-delay: 1600ms;
+}
+.animate-delay-\[1700ms\] {
+  animation-delay: 1700ms;
+}
+.animate-delay-\[1800ms\] {
+  animation-delay: 1800ms;
+}
+.animate-delay-\[1900ms\] {
+  animation-delay: 1900ms;
+}
+.animate-delay-\[2000ms\] {
+  animation-delay: 2000ms;
+}
+.animate-delay-\[2100ms\] {
+  animation-delay: 2100ms;
+}
+.animate-delay-\[2200ms\] {
+  animation-delay: 2200ms;
+}
+.animate-delay-\[300ms\] {
+  animation-delay: 300ms;
+}
+.animate-delay-\[400ms\] {
+  animation-delay: 400ms;
+}
+.animate-delay-\[500ms\] {
+  animation-delay: 500ms;
+}
+.animate-delay-\[600ms\] {
+  animation-delay: 600ms;
+}
+.animate-delay-\[700ms\] {
+  animation-delay: 700ms;
+}
+.animate-delay-\[800ms\] {
+  animation-delay: 800ms;
+}
+.animate-delay-\[900ms\] {
+  animation-delay: 900ms;
+}
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
 .animate-duration-1000 {
   animation-duration: 1000ms;
 }
+.animate-duration-500 {
+  animation-duration: 500ms;
+}
 .animate-duration-700 {
   animation-duration: 700ms;
+}
+.animate-duration-\[1000ms\] {
+  animation-duration: 1000ms;
+}
+.animate-fill-both {
+  animation-fill-mode: both;
 }
 .animate-once {
   animation-iteration-count: 1;
@@ -995,6 +1090,7 @@ nav li:hover {
 
 .menuIsOpen .menu {
   transform: translateX(0);
+  transition-duration: 1000ms;
 }
 
 .slide:hover h1 {
@@ -1008,6 +1104,16 @@ nav li:hover {
 
 input {
   border-color: #6F6F6F;
+}
+
+.animate-fade-up {
+  animation-timeline: view();
+  animation-range: entry 5% cover 70%;
+}
+
+.animate-fade {
+  animation-timeline: view();
+  animation-range: entry 5% cover 40%;
 }
 
 .hover\:z-10:hover {
@@ -1030,10 +1136,6 @@ input {
 
 .hover\:bg-\[\#00000055\]:hover {
   background-color: #00000055;
-}
-
-.hover\:bg-\[\#00000088\]:hover {
-  background-color: #00000088;
 }
 
 .hover\:bg-\[\#ffffff33\]:hover {
@@ -1060,8 +1162,8 @@ input {
   .md\:bottom-0 {
     bottom: 0px;
   }
-  .md\:left-20 {
-    left: 5rem;
+  .md\:left-4 {
+    left: 1rem;
   }
   .md\:left-\[10\%\] {
     left: 10%;
@@ -1075,8 +1177,8 @@ input {
   .md\:top-0 {
     top: 0px;
   }
-  .md\:top-20 {
-    top: 5rem;
+  .md\:top-4 {
+    top: 1rem;
   }
   .md\:mt-0 {
     margin-top: 0px;
@@ -1096,8 +1198,8 @@ input {
   .md\:h-\[300px\] {
     height: 300px;
   }
-  .md\:h-\[420px\] {
-    height: 420px;
+  .md\:h-\[500px\] {
+    height: 500px;
   }
   .md\:h-auto {
     height: auto;
@@ -1114,8 +1216,8 @@ input {
   .md\:w-\[500px\] {
     width: 500px;
   }
-  .md\:w-\[55\%\] {
-    width: 55%;
+  .md\:w-\[57\%\] {
+    width: 57%;
   }
   .md\:w-\[700px\] {
     width: 700px;
@@ -1185,10 +1287,6 @@ input {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .md\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
 }
 
 @media (min-width: 1536px) {
@@ -1201,8 +1299,5 @@ input {
   .\32xl\:text-black {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
-  }
-  .\32xl\:hover\:bg-\[\#00000055\]:hover {
-    background-color: #00000055;
   }
 }

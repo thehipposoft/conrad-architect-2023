@@ -7,6 +7,7 @@ import getAllProjects from '@/API/getAllProjects'
 import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
 import getProject from '@/API/getProject'
+import Loader from '@/components/Loader'
 
 export default async function  Home() {
 
@@ -14,12 +15,9 @@ export default async function  Home() {
 
   return (
     <main className="">
-      <Nav />
-      <section className='h-screen md:hidden flex flex-col justify-center items-center '>
-        <h1 className='text-3xl animate-fade-up animate-duration-700 animate-delay-300'>JAMES CONRAD</h1>
-        <h1 className='text-3xl animate-fade-up animate-duration-700 animate-delay-1000'>ARCHITECT</h1>
-      </section>
+      <Loader />
       <Banner projects={projectsData}/>
+      <Nav />
       <ProjectsComp projects={projectsData}/>
       <About />
       <Contact />

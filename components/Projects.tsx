@@ -13,8 +13,8 @@ const ProjectsComp = ({ projects }:Props) => {
 
     return (
         <div className='h-screen' id='projects'>
-            <h1 className='md:pl-20 md:pt-6 pt-20 text-3xl text-center md:text-left animate-fade-up animate-duration-1000 animate-delay-500 animate-once'>OUR PROJECTS</h1>
-            <div className='flex justify-center md:mt-2 mt-20 animate-fade-up animate-duration-1000 animate-delay-1000'>
+            <h1 className='md:pl-20 md:pt-6 pt-20 text-3xl text-center md:text-left animate-fade-up'>OUR PROJECTS</h1>
+            <div className='flex justify-center md:mt-2 mt-12 animate-fade-up'>
                 {
                     projects.length > 0 ?
                         <Slider projectsToDisplay={projects}/>

@@ -16,7 +16,7 @@ export default async function ProjectPage({ params: {projectsId}}: Params) {
 
     return(
         <div>
-            <Link href={'/'} className="absolute right-[5%] top-16 p-2 hover:bg-[#00000055] duration-300">HOME</Link>
+            <Link href={'/'} className="absolute right-[5%] top-16 p-2 hover:bg-[#00000055] duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
             <ProjectDetail project={project} />
         </div>
     )

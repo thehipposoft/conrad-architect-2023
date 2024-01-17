@@ -25,7 +25,8 @@ const GallerySlider = ({projectImages}:any) => {
                 <div className="flex items-center md:max-w-[900px] max-h-[85vh] overflow-hidden mx-auto">
                     {
                         projectImages.map((val:any, index:any) => (
-                            <div 
+                            <div
+                                key={index}
                                 className='md:w-[900px] md:min-h-[450px] duration-500'
                                 style={{
                                     translate: `${-100 * imageIndex}%`,

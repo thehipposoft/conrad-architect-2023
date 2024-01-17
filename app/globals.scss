@@ -17,6 +17,9 @@ h3 {
     font-family: $inter-light;
 }
 
+//Loader 
+
+
 //Banner
 .tile-1:hover {
     transform: scale(1.05);
@@ -62,6 +65,7 @@ nav {
 .menuIsOpen {
     .menu {
         transform: translateX(0);
+        transition-duration: 1000ms;
     }
 }
 
@@ -83,4 +87,16 @@ nav {
 
 input {
     border-color: #6F6F6F;
+}
+
+//Project
+
+.animate-fade-up {
+    animation-timeline: view();
+    animation-range: entry 5% cover 70%;
+}
+
+.animate-fade {
+    animation-timeline: view();
+    animation-range: entry 5% cover 40%;
 }

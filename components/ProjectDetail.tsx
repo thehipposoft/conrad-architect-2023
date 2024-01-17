@@ -20,8 +20,8 @@ const ProjectDetail = ({ project }:Props) => {
         <div className='h-screen flex md:justify-center md:items-center items-start'>
             <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[40%] md:mt-0'>
                 <div 
-                    className='md:w-[35%] flex flex-col md:justify-between mb-6 animate-fade
-                        animate-duration-1000 animate-ease-in animate-delay-100 animate-once'
+                    className='md:w-[35%] flex flex-col md:justify-between mb-6 animate-fade-right
+                        animate-duration-500 animate-ease-in animate-delay-100 animate-once'
                     >
                     <div className='pl-6 md:pl-0'>
                         <h3 className='text-sm'>PROJECT</h3>
@@ -45,15 +45,13 @@ const ProjectDetail = ({ project }:Props) => {
                     </div>
                 </div>
                     <div 
-                        className='relative md:w-[55%] w-screen md:h-[420px] h-[375px] animate-fade-left
-                        animate-duration-1000 animate-delay-700 animate-once cursor-pointer'
+                        className='relative md:w-[57%] w-screen md:h-[500px] h-[375px] animate-fade-left 
+                        animate-duration-1000 animate-delay-[800ms] animate-once cursor-pointer bg-cover bg-center'
                         onClick={toggleGallery}
+                        style={{
+                            backgroundImage: `url(${project.main_image})`,
+                        }}
                     >
-                        <Image 
-                            src={project.main_image} 
-                            alt={`${project.title} main image`} 
-                            fill
-                        />
                     </div>
                 <div className='flex justify-between md:hidden px-6 pt-12'>
                         <div>
