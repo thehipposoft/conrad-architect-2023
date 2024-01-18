@@ -1,8 +1,27 @@
-import React from 'react';
+'use client'
+import React,  {useState } from 'react';
 
 const Loader = () => {
+
+const [fade, setFade] = useState<boolean>(false);
+const [remove, setRemove] = useState<boolean>(false);
+
+setTimeout(() => {
+    setFade(true);
+}, 3000)
+
+setTimeout(() => {
+    setRemove(true);
+}, 4500)
+
     return (
-        <div className='h-screen w-[98vw] relative flex justify-center items-center'>
+        <div 
+            className={`h-screen w-[98vw] bottom-0 absolute z-10 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
+            ${fade === true ? 'opacity-0' : ''}
+            ${remove === true ? '-translate-y-full' : ''}
+             `}
+
+        >
             <section className='flex loader-tex uppercase text-2xl'>
                 <p className='animate-fade-left animate-duration-[1000ms] animate-delay-[300ms] animate-fill-both'>J</p>
                 <p className='animate-fade-left animate-duration-[1000ms] animate-delay-[400ms]'>a</p>

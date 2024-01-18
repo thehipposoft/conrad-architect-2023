@@ -16,8 +16,8 @@ export default async function  Home() {
   return (
     <main className="">
       <Loader />
-      <Banner projects={projectsData}/>
       <Nav />
+      <Banner projects={projectsData}/>
       <ProjectsComp projects={projectsData}/>
       <About />
       <Contact />
