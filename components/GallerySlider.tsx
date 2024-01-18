@@ -34,7 +34,7 @@ const GallerySlider = ({projectImages}:any) => {
                                 onClick={showNextImage}
                             >
                                 <Image 
-                                    className='max-w-none' 
+                                    className='max-w-[100vw]' 
                                     src={val} 
                                     alt=''
                                     key={index}

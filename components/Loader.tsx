@@ -1,22 +1,26 @@
 'use client'
-import React,  {useState } from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Loader = () => {
 
 const [fade, setFade] = useState<boolean>(false);
 const [remove, setRemove] = useState<boolean>(false);
 
-setTimeout(() => {
-    setFade(true);
-}, 3000)
+useEffect(() =>{
+    setTimeout(() => {
+        setFade(true);
+    }, 3000)
+    
+    setTimeout(() => {
+        setRemove(true);
+    }, 4500)
+}, [])
 
-setTimeout(() => {
-    setRemove(true);
-}, 4500)
+
 
     return (
         <div 
-            className={`h-screen w-[98vw] bottom-0 absolute z-10 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
+            className={`h-screen md:w-[98vw] w-screen bottom-0 absolute z-10 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
             ${fade === true ? 'opacity-0' : ''}
             ${remove === true ? '-translate-y-full' : ''}
              `}
