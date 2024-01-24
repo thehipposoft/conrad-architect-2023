@@ -11,7 +11,7 @@ const toggleMenu = () => {
 
     return (
         <div className={`${openMenu ? 'menuIsOpen ' : ''}`}>
-            <button className='fixed md:top-4 top-6 md:left-4 left-6 z-20 text-black animate-fade-right animate-duration-500 animate-delay-[1200ms]
+            <button className='absolute md:top-4 top-6 md:left-4 left-6 z-20 text-black animate-fade-right animate-duration-500 animate-delay-[1200ms]
              duration-500 p-2 2xl:text-black hover:bg-[#00000055] text-xl md:text-base' onClick={toggleMenu}>
                 MENU
             </button>

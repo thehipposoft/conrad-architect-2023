@@ -6,7 +6,6 @@ import ProjectsComp from '@/components/Projects'
 import getAllProjects from '@/API/getAllProjects'
 import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
-import getProject from '@/API/getProject'
 import Loader from '@/components/Loader'
 
 export default async function  Home() {

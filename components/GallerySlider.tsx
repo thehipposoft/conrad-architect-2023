@@ -63,6 +63,7 @@ const GallerySlider = ({projectImages}:any) => {
                         <path d="M2.2834 0L0 2.35L7.417 10L0 17.65L2.2834 20L12 10L2.2834 0Z" fill="white"/>
                     </svg>
                 </button>
+            <p className='text-white text-center pt-4'><strong>{`${imageIndex + 1}`}</strong> | {projectImages.length - 1}</p>
             </div>
         </div>
     );

@@ -28,10 +28,9 @@ export function Slider({ projectsToDisplay }:any) {
                     projectsToDisplay.map((val:any, index:any) => (
                         <Link href={`projects/${val.id}`} key={index}>
                             <div 
-                                className="h-[450px] md:w-[700px] max-w-[700px] w-screen duration-500 relative slide overflow-hidden"
+                                className="h-[450px] md:w-[700px] max-w-[700px] w-screen relative slide overflow-hidden duration-700 slider-effect"
                                 style={{
                                     backgroundImage: `url(${val.main_image})`,
-                                    backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     translate: `${-100 * imageIndex}%`,
                                 }}
