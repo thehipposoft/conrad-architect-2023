@@ -28,7 +28,7 @@ export function AboutSlider({ members }:Props) {
     
 
     return(
-        <div className={'mx-auto relative pt-16'}>
+        <div className={'mx-auto relative pt-20 2xl:pt-40'}>
             <div className="relative mx-auto justify-center items-center animate-fade-up animate-duration-1000 animate-delay-500">
                 <div className="flex max-w-[500px] overflow-hidden mx-auto">
                     {

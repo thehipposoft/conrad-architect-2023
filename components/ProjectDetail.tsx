@@ -73,6 +73,18 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                 </div>
                 <Gallery projectImages={project.images} isGalleryOpen={openGallery} closeGallery={toggleGallery} />
             </div>
+
+        </div>
+    );
+};
+
+export default ProjectDetail;
+
+
+/*
+
+TODO: Add 'Next project' button
+
             <div className='flex justify-end absolute right-[5%] bottom-[10%] '>
                 <Link 
                     href={`projects/`}
@@ -81,8 +93,5 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                     Next Project
                 </Link>
             </div>
-        </div>
-    );
-};
 
-export default ProjectDetail;
+*/

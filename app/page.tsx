@@ -7,6 +7,7 @@ import getAllProjects from '@/API/getAllProjects'
 import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
 import Loader from '@/components/Loader'
+import SocialMedia from '@/components/SocialMedia'
 
 export default async function  Home() {
 
@@ -20,6 +21,7 @@ export default async function  Home() {
       <ProjectsComp projects={projectsData}/>
       <About />
       <Contact />
+      <SocialMedia projects={projectsData}/>
     </main>
   )
 }
