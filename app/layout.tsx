@@ -4,9 +4,30 @@ import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Conrad Architect',
   description: "JCA provide highly personalized service. Our wealth of experience is invaluable in selecting the right property.",
+  openGraph: {
+    title: 'Conrad Architect',
+    description: 'JCA provide highly personalized service. Our wealth of experience is invaluable in selecting the right property.',
+    type: 'website',
+    url: 'https://www.conradarchitect.com/',
+    siteName: 'The Hipposoft',
+    images: [
+      {
+        url: 'https://conrad-architect-2023.netlify.app/assets/images/logo.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://conrad-architect-2023.netlify.app/assets/images/logo.png',
+        width: 1800,
+        height: 1600,
+        alt: 'JCA provide highly personalized service. Our wealth of experience is invaluable in selecting the right property.',
+      },
+    ],
+    locale: 'en_AU',
+  }
 }
 
 export default function RootLayout({
@@ -17,10 +38,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Conrad Architect" />
-        <meta property="og:description" content="JCA provide highly personalized service. Our wealth of experience is invaluable in selecting the right property." />
-        <meta property="og:image" content="https://drive.google.com/file/d/1RpJEz9iaChXAtJWbocQxakENlBwX3N8I/view?usp=sharing" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
