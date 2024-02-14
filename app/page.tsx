@@ -8,6 +8,7 @@ import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
 import Loader from '@/components/Loader'
 import SocialMedia from '@/components/SocialMedia'
+import Image from 'next/image'
 
 export default async function  Home() {
 
@@ -18,6 +19,7 @@ export default async function  Home() {
   return (
     <main className="">
       <Loader />
+      <Image src={'/assets/images/logo-black.png'} alt='James Conrad Architect logo' width={250} height={100} className='absolute top-0 right-16 hidden md:block'/>
       <Nav />
       <Banner projects={projectsData}/>
       <ProjectsComp projects={projectsData}/>

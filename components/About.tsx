@@ -26,7 +26,7 @@ const ABOUT_DATA = [
 const About = () => {
     return (
         <div className='h-screen bg-black' id='about'>
-            <div className='md:pt-20 pt-[30%]'>
+            <div className='md:pt-12 pt-[30%]'>
                 <h1 className='text-white text-3xl md:pl-20 md:pb-0 text-center md:text-left animate-fade-up animate-duration-1000 animate-delay-500'>ABOUT US</h1>
                 <AboutSlider members={ABOUT_DATA} />
             </div>
