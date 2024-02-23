@@ -23,7 +23,7 @@ const SocialMedia = ({ projects }: Props) => {
                 </div>
                 <div className={'py-3 gap-3 flex items-center pr-4 md:pr-0'}>
                     <a
-                        href={'https://www.instagram.com/steel_art_sla/'}
+                        href={''}
                         target={"_blank"} rel={'noreferrer'}
                         className={'mr-2 flex'}
                     >
@@ -32,7 +32,7 @@ const SocialMedia = ({ projects }: Props) => {
                     </svg>
                     </a>
                     <a
-                        href={'https://www.facebook.com/profile.php?id=100063616015472'}
+                        href={''}
                         target={"_blank"} rel={'noreferrer'}
                         className={'mr-2 flex'}
                     >

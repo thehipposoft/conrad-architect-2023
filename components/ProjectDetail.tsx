@@ -62,6 +62,9 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                                 backgroundImage: `url(${project.main_image})`,
                             }}
                         >
+                        <div className='absolute top-0 left-0 light bg-black/30 text-white w-full h-full flex justify-center items-center opacity-0 duration-500 hover:opacity-100 cursor-pointer'>
+                            Discover
+                        </div>
                         </div>
                     <div className='flex justify-between md:hidden px-6 pt-12'>
                             <div>
