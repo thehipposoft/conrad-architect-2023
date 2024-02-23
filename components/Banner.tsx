@@ -9,9 +9,9 @@ type Props = {
 const Banner = ({ projects }: Props) => {
 
     return (
-        <div className='hidden md:grid grid-cols-4 2xl:items-center mt-20 2xl:mt-0 w-[1350px] mx-auto h-screen'>
+        <div className='hidden md:grid grid-cols-4 gap-4 2xl:mt-0 w-[1350px] m-auto h-[85vh] items-center'>
             <Link href={`/projects/${projects[7].id}`} 
-                className='h-[600px] w-[325px] cursor-pointer relative duration-500 tile-1 hover:z-10 bg-center
+                className='h-[600px] w-full cursor-pointer relative duration-500 tile-1 hover:z-10 bg-center
                             animate-fade animate-duration-1000 animate-ease-in animate-delay-300 animate-once' 
                 style={{ 
                     backgroundImage: `url(${projects[7].main_image})`,
@@ -24,8 +24,8 @@ const Banner = ({ projects }: Props) => {
                 </div>
             </Link>
             <Link href={`/projects/${projects[5].id}`} 
-                className='bg-slate-400 relative h-[600px] w-[325px] cursor-pointer hover:scale-110 hover:z-10 duration-500
-                             tile-2 flex justify-center items-center translate-y-6 bg-center
+                className='bg-slate-400 relative h-[600px] w-full cursor-pointer hover:scale-110 hover:z-10 duration-500
+                             tile-2 flex justify-center items-center bg-center
                              animate-fade animate-duration-1000 animate-ease-in animate-delay-500'
                 style={{ backgroundImage: `url(${projects[5].main_image})`,
                 backgroundSize: 'cover',
@@ -35,7 +35,7 @@ const Banner = ({ projects }: Props) => {
                 <h2 className='text-white relative z-10 opacity-0 duration-500'>405 DARTMOOR</h2>
             </Link>
             <Link href={`/projects/${projects[4].id}`} 
-                className='bg-slate-400 relative h-[600px] w-[325px] cursor-pointer hover:scale-110 hover:z-10 duration-500
+                className='bg-slate-400 relative h-[600px] w-full cursor-pointer hover:scale-110 hover:z-10 duration-500
                             tile-2 flex justify-center items-center bg-center
                             animate-fade animate-duration-1000 animate-ease-in animate-delay-700
                             '
@@ -47,8 +47,8 @@ const Banner = ({ projects }: Props) => {
                 <h2 className='text-white relative z-10 opacity-0 duration-500'>721 MANZANITA</h2>
             </Link>
             <Link href={`/projects/${projects[1].id}`}  
-                className='bg-slate-400 h-[600px] w-[325px] cursor-pointer relative duration-500
-                             hover:z-10 tile-3 translate-y-6 bg-center animate-fade animate-duration-1000 animate-ease-in animate-delay-1000'
+                className='bg-slate-400 h-[600px] w-full cursor-pointer relative duration-500
+                             hover:z-10 tile-3 bg-center animate-fade animate-duration-1000 animate-ease-in animate-delay-1000'
                 style={{ backgroundImage: `url(${projects[1].main_image})`,
                 backgroundSize: 'cover',
             }}

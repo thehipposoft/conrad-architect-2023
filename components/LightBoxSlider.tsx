@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import Image from 'next/image';
 
-const GallerySlider = ({projectImages}:any) => {
+const LightBoxSlider = ({projectImages}:any) => {
 
     const [imageIndex, setImageIndex] = useState(0);
 
@@ -69,4 +69,4 @@ const GallerySlider = ({projectImages}:any) => {
     );
 };
 
-export default GallerySlider;
+export default LightBoxSlider;

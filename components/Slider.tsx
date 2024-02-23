@@ -22,17 +22,17 @@ export function Slider({ projectsToDisplay }:any) {
     
 
     return(
-        <div className={'mx-auto relative md:pt-20 flex items-center justify-center'}>
-            <div className="relative max-h-[450px] md:max-w-[1400px] max-w-[100vw] flex overflow-hidden mx-auto">
+        <div className={'mx-auto relative md:pt-12 flex items-center justify-center'}>
+            <div className="relative max-h-[450px] max-w-[1350px] flex gap-4 overflow-hidden mx-auto">
                 {
                     projectsToDisplay.map((val:any, index:any) => (
                         <Link href={`projects/${val.id}`} key={index}>
                             <div 
-                                className="h-[450px] md:w-[700px] max-w-[700px] w-screen relative slide overflow-hidden duration-700 slider-effect"
+                                className="h-[450px] w-[670px] slide overflow-hidden duration-700 slider-effect"
                                 style={{
                                     backgroundImage: `url(${val.main_image})`,
                                     backgroundPosition: 'center',
-                                    translate: `${-100 * imageIndex}%`,
+                                    translate: `${-102.5 * imageIndex}%`,
                                 }}
                             >
                                 <h1 className="absolute bottom-6 right-12 text-white uppercase z-20 duration-500">{val.title}</h1>

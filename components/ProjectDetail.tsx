@@ -2,13 +2,16 @@
 import React, {useState} from 'react';
 import { Project } from '@/src/types';
 import Image from 'next/image';
-import Gallery from './Gallery';
 import Link from 'next/link';
+import LightBox from './LightBox';
 
 type Props = {
     project: Project,
     projectsToDisplay: Project[],
 }
+
+
+//TODO: Add 'Next project' button
 
 const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
 
@@ -18,17 +21,17 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
         setOpenGallery(!openGallery)
     }
 
-    console.log(projectsToDisplay)
-
-
-
     return (
-        <div className='md:h-screen flex flex-col justify-center'>
+        <div className='md:h-[90vh] flex flex-col justify-around'>
+            <div className='w-[1300px] mx-auto flex h-16 justify-between items-center'>
+                <Image src={'/assets/images/logo-black.png'} alt='James Conrad Architect logo' width={190} height={100} className=' duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'/>
+                <Link href={'/'} className="p-2 hover:bg-[#00000055] duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
+            </div>
             <div className='flex md:justify-center md:items-center items-start'>
                 <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[40%] md:mt-0'>
                     <div 
-                        className='md:w-[35%] flex flex-col md:justify-between mb-6 animate-fade
-                            animate-duration-1000 animate-ease-in animate-delay-100 animate-once'
+                        className='md:w-[35%] flex flex-col md:justify-between mb-6 animate-fade-right
+                            animate-duration-500 animate-ease-in animate-delay-100 animate-once'
                         >
                         <div className='pl-6 md:pl-0'>
                             <h3 className='text-sm'>PROJECT</h3>
@@ -71,7 +74,7 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                             </div>
                         </div>
                 </div>
-                <Gallery projectImages={project.images} isGalleryOpen={openGallery} closeGallery={toggleGallery} />
+                <LightBox projectImages={project.images} isGalleryOpen={openGallery} closeGallery={toggleGallery} />
             </div>
 
         </div>
@@ -83,7 +86,6 @@ export default ProjectDetail;
 
 /*
 
-TODO: Add 'Next project' button
 
             <div className='flex justify-end absolute right-[5%] bottom-[10%] '>
                 <Link 
