@@ -15,13 +15,13 @@ const GalleryPageComponent = ({ projects }:Props) => {
                     return(
                         <div 
                             key={index}
-                            className='flex justify-between w-[1350px] mx-auto mt-16'
+                            className='flex md:flex-row flex-col md:justify-between md:w-[1350px] mx-auto mt-16'
                         >
-                            <a href={`/projects/${project.id}`}><h3 className='uppercase hover:underline'>{project.title}</h3></a>
-                            <div className='grid grid-cols-10 grid-rows-2 gap-4 w-[900px]'>
+                            <a href={`/projects/${project.id}`}><h3 className='uppercase hover:underline text-center md:text-left mb-8'>{project.title}</h3></a>
+                            <div className='md:grid flex flex-col md:grid-cols-10 md:grid-rows-2  gap-4 md:w-[900px]'>
                                 <Link 
                                     href={`/projects/${project.id}`} 
-                                    className='col-span-4 h-[400px] w-full relative'
+                                    className='col-span-4 md:h-[400px] h-[180px] md:w-full w-screen relative'
                                     style={{
                                         backgroundImage: `url(${project.images[0]})`,
                                         backgroundSize: 'cover',
@@ -34,7 +34,7 @@ const GalleryPageComponent = ({ projects }:Props) => {
                                 </Link>
                                 <Link 
                                     href={`/projects/${project.id}`} 
-                                    className='col-span-6 h-[400px] w-full relative'
+                                    className='col-span-6 md:h-[400px] h-[180px] md:w-full w-screen relative'
                                     style={{
                                         backgroundImage: `url(${project.images[1]})`,
                                         backgroundSize: 'cover',
@@ -47,7 +47,7 @@ const GalleryPageComponent = ({ projects }:Props) => {
                                 </Link>
                                 <Link 
                                     href={`/projects/${project.id}`} 
-                                    className='col-span-6 h-[400px] w-full relative'
+                                    className='col-span-6 md:h-[400px] h-[180px] md:w-full w-screen relative'
                                     style={{
                                         backgroundImage: `url(${project.images[2]})`,
                                         backgroundSize: 'cover',
@@ -60,7 +60,7 @@ const GalleryPageComponent = ({ projects }:Props) => {
                                 </Link>
                                 <Link 
                                     href={`/projects/${project.id}`} 
-                                    className='col-span-4 h-[400px] w-full relative'
+                                    className={` ${project.images[3] ? '' : 'hidden'} col-span-4 md:h-[400px] h-[180px] md:w-full w-screen relative`}
                                     style={{
                                         backgroundImage: `url(${project.images[3]})`,
                                         backgroundSize: 'cover',

@@ -15,7 +15,7 @@ const toggleMenu = () => {
         <div className={`${openMenu ? 'menuIsOpen ' : ''} `}>
             <div className='flex justify-between md:w-[1350px] h-16 md:mx-auto md:mt-0 mt-2 mx-2'>
                 <button className='text-black animate-fade-right animate-duration-500 animate-delay-[1200ms]
-                duration-500 p-2 my-2  hover:bg-[#00000055] text-xl md:text-base' onClick={toggleMenu}>
+                duration-1000 p-2 my-2  hover:bg-[#00000055] text-xl md:text-base' onClick={toggleMenu}>
                     MENU
                 </button>
                 <Image 
@@ -26,14 +26,14 @@ const toggleMenu = () => {
                     className='duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'
                 />
             </div>
-            <div className={`h-screen md:w-full w-screen overflow-hidden flex flex-col items-center fixed menu
+            <div className={`h-screen md:w-full w-screen overflow-hidden flex flex-col items-center md:fixed absolute menu
              top-0 left-0 z-20 -translate-x-full bg-[#e9e8e8] duration-1000`}>
-                <div className='flex w-[1350px] h-16 md:mx-auto md:mt-0 mt-2 mx-2'>
-                    <button className='text-xl text-black md:text-base hover:bg-[#00000050] duration-500 p-2 my-2' onClick={toggleMenu}>
+                <div className='flex md:w-[1350px] w-full h-16 md:mx-auto md:mt-0 mt-2 mx-2'>
+                    <button className='text-xl text-black md:text-base hover:bg-[#00000050] duration-500 p-2 m-2 md:mx-0' onClick={toggleMenu}>
                         CLOSE
                     </button>
                 </div>
-                <div className='flex md:w-[1350px]  justify-between m-auto h-[85vh]'>
+                <div className='flex md:w-[1350px] justify-between m-auto h-[85vh]'>
                     <nav className='flex justify-center mx-auto flex-col'>
                         <ul>
                             <li className='mt-4 text-lg'><a href="/">HOME</a></li>

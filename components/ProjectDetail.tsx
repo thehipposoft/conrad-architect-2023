@@ -23,9 +23,9 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
 
     return (
         <div className='md:h-[90vh] flex flex-col justify-around'>
-            <div className='w-[1300px] mx-auto flex h-16 justify-between items-center'>
+            <div className='md:w-[1300px] px-6 md:px-0 w-full mx-auto flex h-16 justify-between items-center'>
                 <Image src={'/assets/images/logo-black.png'} alt='James Conrad Architect logo' width={190} height={100} className=' duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'/>
-                <Link href={'/'} className="p-2 hover:bg-[#00000055] duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
+                <Link href={'/'} className="p-2 hover:bg-[#00000055] duration-500 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
             </div>
             <div className='flex md:justify-center md:items-center items-start'>
                 <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[40%] md:mt-0'>

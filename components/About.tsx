@@ -27,7 +27,7 @@ const About = () => {
     return (
         <div className='h-screen bg-black' id='about'>
             <div className='md:pt-12 pt-[30%] h-[90%] flex flex-col justify-between'>
-                <h1 className='text-white text-3xl w-[1350px] mx-auto md:pb-0 text-center md:text-left animate-fade-up animate-duration-1000 animate-delay-500'>ABOUT US</h1>
+                <h1 className='text-white text-3xl md:w-[1350px] w-full mx-auto md:pb-0 text-center md:text-left animate-fade-up animate-duration-1000 animate-delay-500'>ABOUT US</h1>
                 <div 
                     className='flex flex-col justify-center items-center duration-500 w-full h-full' 
                 >

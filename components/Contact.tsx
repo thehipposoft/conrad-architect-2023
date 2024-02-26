@@ -18,7 +18,7 @@ const Contact = () => {
                         <input type="text" name="message" id="" placeholder='MESSAGE' className='py-5 px-2 border-b-[1px] w-full' />
                     </section>
                     <section className='text-center mt-4'>
-                        <button type="submit" name="submit" id="" className='rounded-3xl py-2 px-12 border-[#6F6F6F] mt-4 border-solid border-2'>SEND MESSAGE</button>
+                        <button type="submit" name="submit" id="" className='rounded-3xl py-2 md:px-12 px-8 border-[#6F6F6F] mt-4 border-solid border-2'>SEND MESSAGE</button>
                     </section>
                 </form>
             </div>
