@@ -22,27 +22,30 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
     }
 
     return (
-        <div className='md:h-[90vh] flex flex-col justify-around'>
+        <div className='md:h-[90vh]  flex flex-col justify-around'>
             <div className='md:w-[1300px] px-6 md:px-0 w-full mx-auto flex h-16 justify-between items-center'>
                 <Image src={'/assets/images/logo-black.png'} alt='James Conrad Architect logo' width={190} height={100} className=' duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'/>
-                <Link href={'/'} className="p-2 hover:bg-[#00000055] duration-500 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
+                <Link href={'/'} className="hidden md:block p-2 hover:bg-[#00000055] duration-500 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
             </div>
             <div className='flex md:justify-center md:items-center items-start'>
-                <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[40%] md:mt-0'>
+                <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[25%] md:mt-0'>
                     <div 
-                        className='md:w-[35%] flex flex-col md:justify-between mb-6 animate-fade-right
+                        className='md:w-[35%] flex md:flex-col justify-between mb-6 animate-fade-right
                             animate-duration-500 animate-ease-in animate-delay-100 animate-once'
                         >
                         <div className='pl-6 md:pl-0'>
                             <h3 className='text-sm'>PROJECT</h3>
                             <h1 className='py-1 text-lg uppercase'>{project.title}</h1>
                             <button 
-                                className='hover:underline duration-300'
+                                className='hover:underline underline md:no-underline duration-300'
                                 onClick={toggleGallery}
                             >
                                 <h3>Discover</h3>
                             </button>
                         </div>
+                        <Link href={'/'}>
+                            <img src="/assets/images/close.svg" alt="Back home button" className='w-6 mr-8'/>
+                        </Link>
                         <div className='md:flex justify-between hidden'>
                             <div>
                                 <h3 className='text-sm'>CATEGORY</h3>
@@ -55,16 +58,16 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                         </div>
                     </div>
                         <div 
-                            className='slider-effect relative md:w-[57%] w-screen md:h-[500px] h-[375px] animate-fade-left 
+                            className='slider-effect relative md:w-[57%] w-screen md:h-[500px] h-[440px] animate-fade-left 
                             animate-duration-1000 animate-delay-[800ms] animate-once cursor-pointer bg-cover bg-center duration-1000'
                             onClick={toggleGallery}
                             style={{
                                 backgroundImage: `url(${project.main_image})`,
                             }}
                         >
-                        <div className='absolute top-0 left-0 light bg-black/30 text-white w-full h-full flex justify-center items-center opacity-0 duration-500 hover:opacity-100 cursor-pointer'>
-                            Discover
-                        </div>
+                            <div className='absolute top-0 left-0 light bg-black/30 text-white w-full h-full flex justify-center items-center opacity-0 duration-500 hover:opacity-100 cursor-pointer'>
+                                Discover
+                            </div>
                         </div>
                     <div className='flex justify-between md:hidden px-6 pt-12'>
                             <div>

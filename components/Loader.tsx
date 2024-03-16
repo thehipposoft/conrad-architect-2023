@@ -20,7 +20,7 @@ useEffect(() =>{
 
     return (
         <div 
-            className={`h-screen md:w-[98vw] w-screen bottom-0 absolute z-10 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
+            className={`h-screen md:w-[98vw] w-screen bottom-0 absolute z-20 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
             ${fade === true ? 'opacity-0' : ''}
             ${remove === true ? '-translate-y-full' : ''}
              `}
