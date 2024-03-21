@@ -15,6 +15,9 @@ type Props = {
 
 const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
 
+    console.log('ASDADW', project)
+
+
     const [openGallery, setOpenGallery] = useState(false);
 
     const toggleGallery = () => {

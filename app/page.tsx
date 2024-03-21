@@ -14,7 +14,6 @@ export default async function  Home() {
 
   const projectsData: Project[] = await getAllProjects();
 
-
   return (
     <main className="">
       <Loader />
