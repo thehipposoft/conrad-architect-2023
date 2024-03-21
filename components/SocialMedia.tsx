@@ -1,13 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
 import { Project } from '@/src/types';
 
 type Props = {
-    projects: Project[] 
+    projects: Project[]
 }
 
 
 const SocialMedia = ({ projects }: Props) => {
+   
     return(
         <div className='flex flex-col max-w-[1300px] md:px-20 mx-auto mb-12'>
             <div
@@ -15,7 +15,7 @@ const SocialMedia = ({ projects }: Props) => {
             >
                 <div className='pl-6 md:pl-0'>
                     <h1 className='py-1 text-2xl'>SOCIAL MEDIA</h1>
-                    <button 
+                    <button
                         className='hover:underline duration-300'
                     >
                         <h3 className='text-sm'>FOLLOW US FOR MORE</h3>
@@ -44,37 +44,37 @@ const SocialMedia = ({ projects }: Props) => {
                 </div>
             </div>
             <div className='grid md:grid-cols-3 grid-cols-2 gap-1'>
-                <div 
+                <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
                         backgroundImage: `url(${projects[5].images[0]})`,
                     }}
                 />
-                <div 
+                <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
                         backgroundImage: `url(${projects[5].images[1]})`,
                     }}
                 />
-                <div 
+                <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
                         backgroundImage: `url(${projects[5].images[2]})`,
                     }}
                 />
-                <div 
+                <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
                         backgroundImage: `url(${projects[5].images[3]})`,
                     }}
                 />
-                <div 
+                <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
                         backgroundImage: `url(${projects[5].images[5]})`,
                     }}
                 />
-                <div 
+                <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
                         backgroundImage: `url(${projects[5].images[6]})`,
