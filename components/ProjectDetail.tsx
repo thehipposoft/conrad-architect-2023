@@ -25,7 +25,9 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
         <div className='md:h-[90vh]  flex flex-col justify-around'>
             <div className='md:w-[1300px] px-6 md:px-0 w-full mx-auto flex h-16 justify-between items-center'>
                 <Image src={'/assets/images/logo-black.png'} alt='James Conrad Architect logo' width={190} height={100} className=' duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'/>
-                <Link href={'/'} className="hidden md:block p-2 hover:bg-[#00000055] duration-500 animate-fade-left animate-delay-[1600ms] animate-duration-1000">HOME</Link>
+                <Link href={'/'} className='duration-500 animate-fade-left animate-delay-[1600ms] animate-duration-1000'>
+                            <img src="/assets/images/close.svg" alt="Back home button" className='w-6'/>
+                </Link>
             </div>
             <div className='flex md:justify-center md:items-center items-start'>
                 <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[25%] md:mt-0'>
@@ -43,9 +45,7 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                                 <h3>Discover</h3>
                             </button>
                         </div>
-                        <Link href={'/'}>
-                            <img src="/assets/images/close.svg" alt="Back home button" className='w-6 mr-8'/>
-                        </Link>
+
                         <div className='md:flex justify-between hidden'>
                             <div>
                                 <h3 className='text-sm'>CATEGORY</h3>
@@ -88,18 +88,3 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
 };
 
 export default ProjectDetail;
-
-
-/*
-
-
-            <div className='flex justify-end absolute right-[5%] bottom-[10%] '>
-                <Link 
-                    href={`projects/`}
-                    className='hover:underline duration-500 p-2'
-                >
-                    Next Project
-                </Link>
-            </div>
-
-*/
