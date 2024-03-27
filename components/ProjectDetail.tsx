@@ -27,16 +27,15 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
     return (
         <div className='md:h-[90vh]  flex flex-col justify-around'>
             <div className='md:w-[1300px] px-6 md:px-0 w-full mx-auto flex h-16 justify-between items-center'>
-                <Image src={'/assets/images/logo-black.png'} alt='James Conrad Architect logo' width={190} height={100} className=' duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'/>
-                <Link href={'/'} className='duration-500 animate-fade-left animate-delay-[1600ms] animate-duration-1000'>
+                <Image src={'/assets/images/logoblack.svg'} alt='James Conrad Architect logo' width={250} height={100} className=' animate-fade animate-delay-[1800ms] animate-duration-1000'/>
+                <Link href={'/'} className=' animate-fade animate-delay-[1800ms] animate-duration-[2000ms]'>
                             <img src="/assets/images/close.svg" alt="Back home button" className='w-6'/>
                 </Link>
             </div>
             <div className='flex md:justify-center md:items-center items-start'>
                 <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[25%] md:mt-0'>
                     <div 
-                        className='md:w-[35%] flex md:flex-col justify-between mb-6 animate-fade-right
-                            animate-duration-500 animate-ease-in animate-delay-100 animate-once'
+                        className='md:w-[35%] flex md:flex-col justify-between mb-6'
                         >
                         <div className='pl-6 md:pl-0'>
                             <h3 className='text-sm'>PROJECT</h3>
@@ -62,13 +61,13 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                     </div>
                         <div 
                             className='slider-effect relative md:w-[57%] w-screen md:h-[500px] h-[440px] animate-fade-left 
-                            animate-duration-1000 animate-delay-[800ms] animate-once cursor-pointer bg-cover bg-center duration-1000'
+                            animate-duration-[1300ms] animate-delay-[800ms] animate-once cursor-pointer bg-cover bg-center duration-1000'
                             onClick={toggleGallery}
                             style={{
                                 backgroundImage: `url(${project.main_image})`,
                             }}
                         >
-                            <div className='absolute top-0 left-0 light bg-black/30 text-white w-full h-full flex justify-center items-center opacity-0 duration-500 hover:opacity-100 cursor-pointer'>
+                            <div className='absolute top-0 left-0 light bg-black/20 text-white w-full h-full flex justify-center items-center opacity-0 duration-1000 hover:opacity-100 cursor-pointer'>
                                 Discover
                             </div>
                         </div>

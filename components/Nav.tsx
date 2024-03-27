@@ -13,20 +13,20 @@ const toggleMenu = () => {
 
     return (
         <div className={`${openMenu ? 'menuIsOpen ' : ''} `}>
-            <div className='flex justify-between md:w-[1350px] h-16 md:mx-auto md:mt-0 mt-2 mx-2'>
+            <div className='flex justify-between md:w-[1350px] h-16 md:mx-auto md:mt-2 mt-2 mx-2'>
                 <button className='text-black animate-fade-right animate-duration-500 animate-delay-[1200ms]
                 duration-1000 p-2 my-2  hover:bg-[#00000055] text-xl md:text-base' onClick={toggleMenu}>
                     MENU
                 </button>
                 <Image 
-                    src={'/assets/images/logo-black.png'} 
+                    src={'/assets/images/logoblack.svg'} 
                     alt='James Conrad Architect logo' 
-                    width={190} 
+                    width={250} 
                     height={100} 
                     className='duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000 hidden md:block'
                 />
             </div>
-            <div className={`h-screen md:w-full w-screen overflow-hidden flex flex-col items-center md:fixed absolute menu
+            <div className={`h-screen md:w-full w-screen overflow-hidden flex flex-col items-center md:fixed absolute menu opacity-0
              top-0 left-0 z-20 -translate-x-full md:bg-[#e9e8e8] bg-white duration-1000`}>
                 <div className='flex md:w-[1350px] w-full h-16 md:mx-auto md:mt-0 mt-2 mx-2'>
                     <button className='text-xl text-black md:text-base hover:bg-[#00000050] duration-500 p-2 m-2 md:mx-0' onClick={toggleMenu}>

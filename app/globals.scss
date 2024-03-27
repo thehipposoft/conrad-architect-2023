@@ -69,7 +69,8 @@ nav {
 .menuIsOpen {
     .menu {
         transform: translateX(0);
-        transition-duration: 1000ms;
+        opacity: 1;
+        transition: all 800ms ease
     }
 }
 
