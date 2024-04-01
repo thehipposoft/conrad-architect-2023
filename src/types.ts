@@ -4,7 +4,7 @@ export type Project = {
     service: string,
     location: string,
     year: string,
-    images: string[],
+    images: any,
     main_image: string,
     status: string,
     display_in_banner: 'Yes' | 'No',

@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 const LightBoxSlider = ({projectImages}:any) => {
 
+
+
     const [imageIndex, setImageIndex] = useState(0);
 
     function showNextImage() {
@@ -20,7 +22,6 @@ const LightBoxSlider = ({projectImages}:any) => {
         })
     }
 
-    console.log('Images', projectImages)
     return (
         <div className=''>
             <div className={'md:relative w-screen z-10'}>
@@ -37,7 +38,7 @@ const LightBoxSlider = ({projectImages}:any) => {
                             >
                                 <Image
                                     className='max-w-[100vw]'
-                                    src={val} 
+                                    src={val.full_image_url} 
                                     alt=''
                                     key={index}
                                     width={900}

@@ -20,6 +20,7 @@ const ProjectDetail = ({ project }:Props) => {
         setOpenGallery(!openGallery)
     }
 
+
     return (
         <div className='md:h-[90vh]  flex flex-col justify-around'>
             <div className='md:w-[1300px] px-6 md:px-0 w-full mx-auto flex h-16 justify-between items-center'>
