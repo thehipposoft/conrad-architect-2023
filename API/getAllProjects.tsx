@@ -1,8 +1,6 @@
 export default async function getAllProjects() {
     const res = await fetch('https://wp.conradarchitect.com/wp-json/wp/v2/projects');
-
     const data:any = await res.json();
-
 
     const result = data.map((project: any) => {
         if (project.status === 'publish') {

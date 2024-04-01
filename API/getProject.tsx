@@ -1,6 +1,10 @@
-export default async function getProject(projectId: number) {
+export default async function getProject(projectId: number | 'undefined') {
     const res = await fetch(`https://wp.conradarchitect.com/wp-json/wp/v2/projects/${projectId}`);
     const project = await res.json();
+
+    if (!projectId || projectId === 'undefined') {
+        return null;
+    }
 
     const result = {
         id: project.id,

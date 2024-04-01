@@ -1,9 +1,6 @@
 import getProject from "@/API/getProject";
 import ProjectDetail from "@/components/ProjectDetail";
 import { Project } from "@/src/types";
-import getAllProjects from '@/API/getAllProjects'
-import Link from "next/link";
-import Image from "next/image";
 
 type Params = {
     params: {
@@ -12,13 +9,14 @@ type Params = {
 }
 
 export default async function ProjectPage({ params: {projectsId}}: Params) {
-
-    const project: Project = await getProject(projectsId);
-    const projectsData: Project[] = await getAllProjects();
+    const project: null | Project = await getProject(projectsId);
 
     return(
         <div>
-            <ProjectDetail project={project} projectsToDisplay={projectsData} />
+            {
+                project && <ProjectDetail project={project} />
+            }
+
         </div>
     )
 

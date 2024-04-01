@@ -8,10 +8,8 @@ import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
 import Loader from '@/components/Loader'
 import SocialMedia from '@/components/SocialMedia'
-import Image from 'next/image'
 
 export default async function  Home() {
-
   const projectsData: Project[] = await getAllProjects();
 
   return (

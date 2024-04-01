@@ -7,13 +7,11 @@ import LightBox from './LightBox';
 
 type Props = {
     project: Project,
-    projectsToDisplay: Project[],
 }
-
 
 //TODO: Add 'Next project' button
 
-const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
+const ProjectDetail = ({ project }:Props) => {
     const [openGallery, setOpenGallery] = useState(false);
 
     const toggleGallery = () => {
@@ -23,7 +21,16 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
     return (
         <div className='md:h-[90vh]  flex flex-col justify-around'>
             <div className='md:w-[1300px] px-6 md:px-0 w-full mx-auto flex h-16 justify-between items-center'>
-                <Image src={'/assets/images/logoblack.svg'} alt='James Conrad Architect logo' width={250} height={100} className=' animate-fade animate-delay-[1800ms] animate-duration-1000'/>
+                <Link href={'/'}>
+                    <Image
+                        src={'/assets/images/logoblack.svg'}
+                        alt='James Conrad Architect logo'
+                        width={250}
+                        height={100}
+                        className='animate-fade animate-delay-[1800ms] animate-duration-1000'
+                    />
+                </Link>
+
                 <Link href={'/'} className=' animate-fade animate-delay-[1800ms] animate-duration-[2000ms]'>
                             <img src="/assets/images/close.svg" alt="Back home button" className='w-6'/>
                 </Link>
