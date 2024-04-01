@@ -12,6 +12,8 @@ type Props = {
 //TODO: Add 'Next project' button
 
 const ProjectDetail = ({ project }:Props) => {
+
+
     const [openGallery, setOpenGallery] = useState(false);
 
     const toggleGallery = () => {

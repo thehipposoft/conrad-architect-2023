@@ -19,6 +19,8 @@ const LightBoxSlider = ({projectImages}:any) => {
             return index - 1;
         })
     }
+
+    console.log('Images', projectImages)
     return (
         <div className=''>
             <div className={'md:relative w-screen z-10'}>
@@ -35,7 +37,7 @@ const LightBoxSlider = ({projectImages}:any) => {
                             >
                                 <Image
                                     className='max-w-[100vw]'
-                                    src={val.full_image_url} 
+                                    src={val} 
                                     alt=''
                                     key={index}
                                     width={900}
