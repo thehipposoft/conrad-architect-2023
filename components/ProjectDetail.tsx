@@ -14,10 +14,6 @@ type Props = {
 //TODO: Add 'Next project' button
 
 const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
-
-    console.log('ASDADW', project)
-
-
     const [openGallery, setOpenGallery] = useState(false);
 
     const toggleGallery = () => {
@@ -34,13 +30,13 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
             </div>
             <div className='flex md:justify-center md:items-center items-start'>
                 <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[25%] md:mt-0'>
-                    <div 
+                    <div
                         className='md:w-[35%] flex md:flex-col justify-between mb-6'
                         >
                         <div className='pl-6 md:pl-0'>
                             <h3 className='text-sm'>PROJECT</h3>
                             <h1 className='py-1 text-lg uppercase'>{project.title}</h1>
-                            <button 
+                            <button
                                 className='hover:underline underline md:no-underline duration-300'
                                 onClick={toggleGallery}
                             >
@@ -59,8 +55,8 @@ const ProjectDetail = ({ project, projectsToDisplay }:Props) => {
                             </div>
                         </div>
                     </div>
-                        <div 
-                            className='slider-effect relative md:w-[57%] w-screen md:h-[500px] h-[440px] animate-fade-left 
+                        <div
+                            className='slider-effect relative md:w-[57%] w-screen md:h-[500px] h-[440px] animate-fade-left
                             animate-duration-[1300ms] animate-delay-[800ms] animate-once cursor-pointer bg-cover bg-center duration-1000'
                             onClick={toggleGallery}
                             style={{

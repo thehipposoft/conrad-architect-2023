@@ -33,9 +33,9 @@ const LightBoxSlider = ({projectImages}:any) => {
                                 }}
                                 onClick={showNextImage}
                             >
-                                <Image 
-                                    className='max-w-[100vw]' 
-                                    src={val} 
+                                <Image
+                                    className='max-w-[100vw]'
+                                    src={val.full_image_url} 
                                     alt=''
                                     key={index}
                                     width={900}
@@ -47,7 +47,7 @@ const LightBoxSlider = ({projectImages}:any) => {
                     }
                 </div>
 
-                <button 
+                <button
                     className={`${imageIndex === 0 ? 'hidden' : ''} absolute md:top-0 md:bottom-0 bottom-[5%] md:left-[10%] left-[5%] cursor-pointer text-white duration-500 p-2 hover:bg-[#ffffff33]`}
                     onClick={showPrevImage}
                 >
@@ -55,7 +55,7 @@ const LightBoxSlider = ({projectImages}:any) => {
                         <path d="M2.2834 0L0 2.35L7.417 10L0 17.65L2.2834 20L12 10L2.2834 0Z" fill="white"/>
                     </svg>
                 </button>
-                <button 
+                <button
                     className="absolute md:top-0 md:bottom-0 bottom-[5%] md:right-[10%] right-[5%] cursor-pointer text-white duration-500 p-2 hover:bg-[#ffffff33]"
                     onClick={showNextImage}
                 >

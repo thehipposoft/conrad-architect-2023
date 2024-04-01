@@ -8,7 +8,7 @@ export default async function getProject(projectId: number) {
         service: project.acf.services,
         location: project.acf.location,
         year: project.acf.year,
-        images: project.gallery_images ? project.gallery_images : [],
+        images: project.acf.photo_gallery ? project.acf.photo_gallery : [],
         main_image: project.acf.main_image.url,
         status: project.status,
         display_in_banner: project.acf.display_in_banner,
