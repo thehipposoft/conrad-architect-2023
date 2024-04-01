@@ -7,7 +7,7 @@ type Props = {
 
 
 const SocialMedia = ({ projects }: Props) => {
-   
+
     return(
         <div className='flex flex-col max-w-[1300px] md:px-20 mx-auto mb-12'>
             <div
@@ -47,37 +47,37 @@ const SocialMedia = ({ projects }: Props) => {
                 <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
-                        backgroundImage: `url(${projects[5].images[0]})`,
+                        backgroundImage: `url(${projects[5].images[0].full_image_url})`,
                     }}
                 />
                 <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
-                        backgroundImage: `url(${projects[5].images[1]})`,
+                        backgroundImage: `url(${projects[5].images[1].full_image_url})`,
                     }}
                 />
                 <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
-                        backgroundImage: `url(${projects[5].images[2]})`,
+                        backgroundImage: `url(${projects[5].images[2].full_image_url})`,
                     }}
                 />
                 <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
-                        backgroundImage: `url(${projects[5].images[3]})`,
+                        backgroundImage: `url(${projects[5].images[3].full_image_url})`,
                     }}
                 />
                 <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
-                        backgroundImage: `url(${projects[5].images[5]})`,
+                        backgroundImage: `url(${projects[5].images[5].full_image_url})`,
                     }}
                 />
                 <div
                     className='w-full h-[350px] bg-cover bg-center'
                     style={{
-                        backgroundImage: `url(${projects[5].images[6]})`,
+                        backgroundImage: `url(${projects[5].images[6].full_image_url})`,
                     }}
                 />
             </div>
