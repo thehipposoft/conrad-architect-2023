@@ -21,7 +21,7 @@ h3 {
     font-family: $inter-light;
 }
 
-//Loader 
+//Loader
 
 
 //Banner
@@ -74,7 +74,7 @@ nav {
     }
 }
 
-//Carousel 
+//Carousel
 
 .slide:hover {
 
@@ -84,13 +84,14 @@ nav {
 }
 
 .slider-effect {
-    background-size: 100% 100% ;
     &:hover {
-        background-size: 110% 110% ;
+        img {
+            transform: scale(1.1);
+        }
     }
 }
 
-//Contact 
+//Contact
 
 .letter {
     letter-spacing: 4px;

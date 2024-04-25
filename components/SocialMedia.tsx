@@ -1,5 +1,6 @@
 import React from 'react';
 import { Project } from '@/src/types';
+import Image from 'next/image';
 
 type Props = {
     projects: Project[]
@@ -44,42 +45,66 @@ const SocialMedia = ({ projects }: Props) => {
                 </div>
             </div>
             <div className='grid md:grid-cols-3 grid-cols-2 gap-1'>
-                <div
-                    className='w-full h-[350px] bg-cover bg-center'
-                    style={{
-                        backgroundImage: `url(${projects[5].images[0].full_image_url})`,
-                    }}
-                />
-                <div
-                    className='w-full h-[350px] bg-cover bg-center'
-                    style={{
-                        backgroundImage: `url(${projects[5].images[1].full_image_url})`,
-                    }}
-                />
-                <div
-                    className='w-full h-[350px] bg-cover bg-center'
-                    style={{
-                        backgroundImage: `url(${projects[5].images[2].full_image_url})`,
-                    }}
-                />
-                <div
-                    className='w-full h-[350px] bg-cover bg-center'
-                    style={{
-                        backgroundImage: `url(${projects[5].images[3].full_image_url})`,
-                    }}
-                />
-                <div
-                    className='w-full h-[350px] bg-cover bg-center'
-                    style={{
-                        backgroundImage: `url(${projects[5].images[5].full_image_url})`,
-                    }}
-                />
-                <div
-                    className='w-full h-[350px] bg-cover bg-center'
-                    style={{
-                        backgroundImage: `url(${projects[5].images[6].full_image_url})`,
-                    }}
-                />
+                <div className='relative h-[350px]'>
+                    <Image
+                        src={projects[5].images[0].full_image_url}
+                        alt={projects[5].title}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        className="object-cover w-full"
+                    />
+                </div>
+                <div className='relative h-[350px]'>
+                    <Image
+                        src={projects[5].images[1].full_image_url}
+                        alt={projects[5].title}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        className="object-cover w-full"
+                    />
+                </div>
+                <div className='relative h-[350px]'>
+                    <Image
+                        src={projects[5].images[2].full_image_url}
+                        alt={projects[5].title}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        className="object-cover w-full"
+                    />
+                </div>
+                <div className='relative h-[350px]'>
+                    <Image
+                        src={projects[5].images[3].full_image_url}
+                        alt={projects[5].title}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        className="object-cover w-full"
+                    />
+                </div>
+                <div className='relative h-[350px]'>
+                    <Image
+                        src={projects[5].images[5].full_image_url}
+                        alt={projects[5].title}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        className="object-cover w-full"
+                    />
+                </div>
+                <div className='relative h-[350px]'>
+                    <Image
+                        src={projects[5].images[6].full_image_url}
+                        alt={projects[5].title}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        className="object-cover w-full"
+                    />
+                </div>
             </div>
         </div>
     )

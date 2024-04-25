@@ -19,7 +19,7 @@ export function Slider({ projectsToDisplay }:any) {
             return index - 1;
         })
     }
-    
+
 
     return(
         <div className={'mx-auto relative md:pt-12 flex items-center justify-center'}>
@@ -27,21 +27,27 @@ export function Slider({ projectsToDisplay }:any) {
                 {
                     projectsToDisplay.map((val:any, index:any) => (
                         <Link href={`projects/${val.id}`} key={index}>
-                            <div 
-                                className="h-[450px] md:w-[670px] w-screen slide overflow-hidden duration-700 slider-effect"
+                            <div
+                                className="h-[450px] md:w-[670px] w-screen slide overflow-hidden duration-700 slider-effect relative"
                                 style={{
-                                    backgroundImage: `url(${val.main_image})`,
-                                    backgroundPosition: 'center',
                                     translate: `${-102.5 * imageIndex}%`,
                                 }}
                             >
+                                <Image
+                                    src={val.main_image}
+                                    alt={val.title}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    quality={100}
+                                    className="object-cover w-full h-full duration-500 hover:scale-105 cursor-pointer"
+                                />
                                 <h1 className="absolute bottom-6 right-12 text-white uppercase z-20 duration-500">{val.title}</h1>
                                 <div className="absolute top-0 left-0 w-full h-full z-10 bg-black duration-500 opacity-10 hover:opacity-0"></div>
                             </div>
                         </Link>
                     ))
                 }
-            <button 
+            <button
                 className={`${imageIndex === 0 ? 'hidden' : ''} absolute top-0 bottom-0 left-0 cursor-pointer hover:bg-[#00000033] duration-300 p-2`}
                 onClick={showPrevImage}
             >
@@ -49,7 +55,7 @@ export function Slider({ projectsToDisplay }:any) {
                     <path d="M2.2834 0L0 2.35L7.417 10L0 17.65L2.2834 20L12 10L2.2834 0Z" fill="white"/>
                 </svg>
             </button>
-            <button 
+            <button
                 className="absolute top-0 bottom-0 right-0 cursor-pointer hover:bg-[#00000033] duration-300 p-2"
                 onClick={showNextImage}
             >
@@ -62,7 +68,7 @@ export function Slider({ projectsToDisplay }:any) {
                 {
                     projectsToDisplay.map((_:any, index:any) => (
                         index === projectsToDisplay.length -1 ? '' :
-                        <button 
+                        <button
                             className={`${index === imageIndex ? 'bg-neutral-700' : ''} p-[6px] hover:bg-neutral-700 duration-150 rounded-full bg-neutral-400`}
                             onClick={() => setImageIndex(index)}
                             key={index}

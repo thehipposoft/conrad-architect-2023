@@ -12,8 +12,6 @@ import SocialMedia from '@/components/SocialMedia'
 export default async function  Home() {
   const projectsData: Project[] = await getAllProjects();
 
-
-
   return (
     <main className="">
       <Loader />
