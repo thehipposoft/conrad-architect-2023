@@ -13,7 +13,6 @@ type Props = {
 
 const ProjectDetail = ({ project }:Props) => {
 
-
     const [openGallery, setOpenGallery] = useState(false);
 
     const toggleGallery = () => {

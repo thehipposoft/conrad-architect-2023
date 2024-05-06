@@ -14,7 +14,7 @@ export default async function getAllProjects() {
                     images: project.acf.photo_gallery ? project.acf.photo_gallery  : [],
                     main_image: project.acf.main_image.url,
                     status: project.status,
-                    display_in_banner: project.acf.display_in_banner,
+                    display_in_banner: project.acf.display_banner,
                 }
             )
         }

@@ -25,33 +25,12 @@ h3 {
 
 
 //Banner
-.tile-1:hover {
-    transform: scale(1.05);
-    transform-origin: center left;
-
+.tile:hover {
     .overlay-1 {
         opacity: 1;
     }
 }
 
-.tile-2:hover {
-    .overlay-2 {
-        opacity: 0.2;
-    }
-
-    h2 {
-        opacity: 1;
-    }
-}
-
-.tile-3:hover {
-    transform: scale(1.05);
-    transform-origin: center right;
-
-    .overlay-3 {
-        opacity: 1;
-    }
-}
 //Nav
 
 nav {
@@ -70,7 +49,7 @@ nav {
     .menu {
         transform: translateX(0);
         opacity: 1;
-        transition: all 800ms ease
+        transition: all 1100ms ease-in-out
     }
 }
 
