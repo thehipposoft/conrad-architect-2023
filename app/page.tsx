@@ -8,6 +8,7 @@ import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
 import Loader from '@/components/Loader'
 import SocialMedia from '@/components/SocialMedia'
+import Link from 'next/link'
 
 export default async function  Home() {
   const projectsData: Project[] = await getAllProjects();
@@ -21,6 +22,7 @@ export default async function  Home() {
       <About />
       <Contact />
       <SocialMedia projects={projectsData}/>
+      <Link href={'/'} className='flex justify-center hover:underline mb-2 light'>Created by<strong className='px-1 inter'>HippoSoft</strong>| All Right Reserved</Link>
     </main>
   )
 }

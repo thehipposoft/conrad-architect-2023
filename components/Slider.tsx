@@ -64,12 +64,12 @@ export function Slider({ projectsToDisplay }:any) {
                 </svg>
             </button>
             </div>
-            <div className="flex gap-2 absolute left-[50%] bottom-[-30px] -translate-x-[50%]">
+            <div className="flex gap-2 absolute left-[50%] bottom-[-40px] -translate-x-[50%]">
                 {
                     projectsToDisplay.map((_:any, index:any) => (
                         index === projectsToDisplay.length -1 ? '' :
                         <button
-                            className={`${index === imageIndex ? 'bg-neutral-700' : ''} p-[6px] hover:bg-neutral-700 duration-150 rounded-full bg-neutral-400`}
+                            className={`${index === imageIndex ? 'bg-neutral-700' : ''} p-[7px] hover:bg-neutral-700 duration-150 rounded-full bg-neutral-400`}
                             onClick={() => setImageIndex(index)}
                             key={index}
                         >
