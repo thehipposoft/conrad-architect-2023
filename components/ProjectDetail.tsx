@@ -68,11 +68,14 @@ const ProjectDetail = ({ project }:Props) => {
                             className='slider-effect relative md:w-[57%] w-screen md:h-[500px] h-[440px] animate-fade-left
                             animate-duration-[1300ms] animate-delay-[800ms] animate-once cursor-pointer bg-cover bg-center duration-1000'
                             onClick={toggleGallery}
-                            style={{
-                                backgroundImage: `url(${project.main_image})`,
-                            }}
                         >
-                            <div className='absolute top-0 left-0 light bg-black/20 text-white w-full h-full flex justify-center items-center opacity-0 duration-1000 hover:opacity-100 cursor-pointer'>
+                            <Image
+                                src={project.main_image}
+                                fill
+                                alt=''
+                             />
+
+                            <div className='absolute top-0 left-0 light bg-black/20 text-white w-full h-full flex justify-center items-center opacity-0 duration-700 hover:opacity-100 cursor-pointer'>
                                 Discover
                             </div>
                         </div>

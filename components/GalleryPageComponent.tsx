@@ -13,7 +13,6 @@ const GalleryPageComponent = ({ projects }:any) => {
         <div className=''>
             {
                 projects.map((project:any, index:any) => {
-                    console.log('gallery', project)
                     return(
                         <div 
                             key={index}

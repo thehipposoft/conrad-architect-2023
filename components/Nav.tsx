@@ -23,7 +23,7 @@ const toggleMenu = () => {
                     alt='James Conrad Architect logo' 
                     width={250} 
                     height={100} 
-                    className='duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000 hidden md:block'
+                    className='duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'
                 />
             </div>
             <div className={`h-screen md:w-full w-screen overflow-hidden flex flex-col items-center md:fixed absolute menu opacity-0

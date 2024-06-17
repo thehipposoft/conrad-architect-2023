@@ -10,9 +10,6 @@ type Gallery =  {
 
 const LightBox = ({projectImages, isGalleryOpen, closeGallery}:Gallery) => {
 
-    console.log('Proyecto detalle', projectImages)
-
-
     return (
         <div 
             className={`${isGalleryOpen ? 'block' : 'hidden'} h-screen w-full absolute top-0 bg-black/80

@@ -71,6 +71,11 @@ nav {
 }
 
 .slider-effect {
+    overflow: hidden;
+    img {
+        transition: transform 700ms ease;
+    }
+
     &:hover {
         img {
             transform: scale(1.1);
