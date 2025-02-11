@@ -17,7 +17,6 @@ useEffect(() =>{
 }, [])
 
 
-
     return (
         <div 
             className={`h-screen md:w-[98vw] w-screen bottom-0 absolute z-20 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
@@ -51,4 +50,5 @@ useEffect(() =>{
         </div>
     );
 };
+
 export default Loader;
