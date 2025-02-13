@@ -1,29 +1,35 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Loader = () => {
+    const [fade, setFade] = useState<boolean>(false);
+    const [remove, setRemove] = useState<boolean>(false);
+    const [showAnimation, setShowAnimation] = useState<boolean>(false);
 
-const [fade, setFade] = useState<boolean>(false);
-const [remove, setRemove] = useState<boolean>(false);
+    useEffect(() =>{
+        setTimeout(() => {
+            setFade(true);
+        }, 3000);
 
-useEffect(() =>{
-    setTimeout(() => {
-        setFade(true);
-    }, 3000)
-    
-    setTimeout(() => {
-        setRemove(true);
-    }, 4500)
-}, [])
+        setTimeout(() => {
+            setRemove(true);
+        }, 4500);
 
+        const hasPlayed = localStorage.getItem("homeAnimationPlayed");
+
+        if (!hasPlayed) {
+          setShowAnimation(true);
+          localStorage.setItem("homeAnimationPlayed", "true");
+        }
+    }, []);
 
     return (
-        <div 
-            className={`h-screen md:w-[98vw] w-screen bottom-0 absolute z-20 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white 
+        showAnimation
+        ? <div
+            className={`h-screen md:w-[98vw] w-screen bottom-0 absolute z-20 duration-[2000ms] overflow-hidden flex justify-center items-center bg-white
             ${fade === true ? 'opacity-0' : ''}
             ${remove === true ? '-translate-y-full' : ''}
              `}
-
         >
             <section className='flex loader-tex uppercase text-2xl'>
                 <p className='animate-fade-left animate-duration-[1000ms] animate-delay-[300ms] animate-fill-both'>J</p>
@@ -48,6 +54,7 @@ useEffect(() =>{
                 <p className='animate-fade-left animate-duration-[1000ms] animate-delay-[2200ms]'>t</p>
             </section>
         </div>
+        : null
     );
 };
 

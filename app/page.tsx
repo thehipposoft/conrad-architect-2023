@@ -1,4 +1,3 @@
-import React from 'react'
 import About from '@/components/About'
 import Banner from '@/components/Banner'
 import Nav from '@/components/Nav'
@@ -22,7 +21,13 @@ export default async function  Home() {
       <About />
       <Contact />
       <SocialMedia projects={projectsData}/>
-      <Link href={'/'} className='flex justify-center hover:underline mb-2 light'>Created by<strong className='px-1 inter'>HippoSoft</strong>| All Right Reserved</Link>
+      <Link
+        href={'https://www.thehipposoft.com/'}
+        target='_blank'
+        className='flex justify-center hover:underline mb-2 light'
+      >
+        Created by<strong className='px-1 inter'>HippoSoft</strong>| All Right Reserved
+      </Link>
     </main>
   )
 }
