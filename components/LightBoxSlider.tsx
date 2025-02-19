@@ -4,8 +4,6 @@ import Image from 'next/image';
 
 const LightBoxSlider = ({projectImages}:any) => {
 
-
-
     const [imageIndex, setImageIndex] = useState(0);
 
     function showNextImage() {
@@ -25,19 +23,19 @@ const LightBoxSlider = ({projectImages}:any) => {
     return (
         <div className=''>
             <div className={'md:relative w-screen z-10'}>
-                <div className="flex items-center md:max-w-[900px] max-h-[85vh] overflow-hidden mx-auto">
+                <div className="flex items-center md:max-w-[900px] max-h-[90vh] overflow-hidden mx-auto">
                     {
                         projectImages.map((val:any, index:any) => (
                             <div
                                 key={index}
-                                className='md:w-[900px] md:min-h-[450px] duration-500'
+                                className='duration-500 min-w-[900px] flex justify-center items-center'
                                 style={{
                                     translate: `${-100 * imageIndex}%`,
                                 }}
                                 onClick={showNextImage}
                             >
                                 <Image
-                                    className='max-w-[100vw]'
+                                    className='object-cover'
                                     src={val.full_image_url} 
                                     alt=''
                                     key={index}
@@ -49,7 +47,6 @@ const LightBoxSlider = ({projectImages}:any) => {
                         ))
                     }
                 </div>
-
                 <button
                     className={`${imageIndex === 0 ? 'hidden' : ''} absolute md:top-0 md:bottom-0 bottom-[5%] md:left-[10%] left-[5%] cursor-pointer text-white duration-500 p-2 hover:bg-[#ffffff33]`}
                     onClick={showPrevImage}

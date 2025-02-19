@@ -38,10 +38,10 @@ const ProjectDetail = ({ project }:Props) => {
                 </Link>
             </div>
             <div className='flex md:justify-center md:items-center items-start'>
-                <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[25%] md:mt-0'>
+                <div className='flex md:flex-row flex-col md:min-w-[1300px] justify-between mx-auto mt-[5%] md:mt-0'>
                     <div
                         className='md:w-[35%] flex md:flex-col justify-between mb-6'
-                        >
+                    >
                         <div className='pl-6 md:pl-0'>
                             <h3 className='text-sm'>PROJECT</h3>
                             <h1 className='py-1 text-lg uppercase'>{project.title}</h1>
@@ -60,7 +60,7 @@ const ProjectDetail = ({ project }:Props) => {
                             </div>
                             <div>
                                 <h3 className='text-sm'>LOCATION</h3>
-                                <p>{project.location}</p>
+                                {project.location ? <p>{project.location}</p> : <p>-</p>}
                             </div>
                         </div>
                     </div>
@@ -73,6 +73,7 @@ const ProjectDetail = ({ project }:Props) => {
                                 src={project.main_image}
                                 fill
                                 alt=''
+                                className='object-cover'
                              />
 
                             <div className='absolute top-0 left-0 light bg-black/20 text-white w-full h-full flex justify-center items-center opacity-0 duration-700 hover:opacity-100 cursor-pointer'>

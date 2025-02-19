@@ -16,9 +16,16 @@ const GalleryPageComponent = ({ projects }:any) => {
                     return(
                         <div 
                             key={index}
-                            className='flex md:flex-row flex-col md:justify-between md:w-[1350px] mx-auto mt-16'
+                            className='flex md:flex-row flex-col md:justify-between md:w-[1350px] mx-auto md:mt-16 mt-10'
                         >
-                            <a href={`/projects/${project.id}`}><h3 className='uppercase hover:underline text-center md:text-left mb-8'>{project.title}</h3></a>
+                            <div className='flex flex-col'>
+                                <Link href={`/projects/${project.id}`}>
+                                    <h3 className='uppercase hover:underline text-center md:text-left mb-2'>{project.title}</h3>
+                                </Link>
+                                {
+                                    project.year ? <p className='text-center md:text-left pb-4 md:pb-0'>{project.year}</p> : <p className='text-center md:text-left pb-4 md:pb-0'>Up Coming</p>
+                                }
+                            </div>
                             <div className={` ${project.images.length < 3 ? 'h-[550px]' : ''} md:grid flex flex-col md:grid-cols-10 md:grid-rows-2 gap-4 md:w-[900px]`}>
                                 <Link 
                                     href={`/projects/${project.id}`} 

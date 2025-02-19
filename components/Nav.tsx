@@ -40,7 +40,7 @@ const toggleMenu = () => {
                             <li className='mt-4 text-2xl md:text-lg'><a href="#projects" onClick={toggleMenu}>PROJECTS</a></li>
                             <li className='mt-4 text-2xl md:text-lg'><a href="#about" onClick={toggleMenu}>ABOUT</a></li>
                             <li className='mt-4 text-2xl md:text-lg'><a href="#contact" onClick={toggleMenu}>CONTACT</a></li>
-                            <li className='mt-4 text-2xl md:text-lg'><Link href="/other-projects" onClick={toggleMenu}>OTHER PROJECTS</Link></li>
+                            <li className='mt-4 text-2xl md:text-lg'><Link href="/gallery" onClick={toggleMenu}>GALLERY</Link></li>
 
                         </ul>
                     </nav>

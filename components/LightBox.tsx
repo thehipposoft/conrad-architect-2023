@@ -12,7 +12,7 @@ const LightBox = ({projectImages, isGalleryOpen, closeGallery}:Gallery) => {
 
     return (
         <div 
-            className={`${isGalleryOpen ? 'block' : 'hidden'} h-screen w-full absolute top-0 bg-black/80
+            className={`${isGalleryOpen ? 'block' : 'hidden'} h-screen w-full absolute top-0 bg-black/90
             flex justify-center items-center`}
          >
             <button className='absolute z-20 md:right-12 right-[5%] top-6 p-2 cursor-pointer' onClick={closeGallery}>

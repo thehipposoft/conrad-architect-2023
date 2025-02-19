@@ -10,7 +10,7 @@ type Props = {
 const SocialMedia = ({ projects }: Props) => {
 
     return(
-        <div className='flex flex-col max-w-[1300px] md:px-20 mx-auto mb-12'>
+        <div className='hidden flex-col max-w-[1300px] md:px-20 mx-auto mb-12'>
             <div
                 className={'flex justify-between py-6'}
             >
