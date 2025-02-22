@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { ViewTransitions } from 'next-view-transitions'
 import { Inter } from 'next/font/google'
 import './globals.scss'
 
@@ -36,10 +36,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-      </head>
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <head>
+        </head>
+        <body className={inter.className}>{children}</body>
+      </html>
+    </ViewTransitions>
   )
 }

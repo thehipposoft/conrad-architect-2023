@@ -1,13 +1,15 @@
+import { revalidatePath } from "next/cache";
 import GalleryPageComponent from "@/components/GalleryPageComponent";
 import getAllProjects from '@/API/getAllProjects'
 import { Project } from "@/src/types";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 
 
 export default async function GalleryPage() {
 
-    const projectsData: Project[] = await getAllProjects();
+    revalidatePath('/gallery', 'page')
 
+    const projectsData: Project[] = await getAllProjects();
 
     return(
         <div>

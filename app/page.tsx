@@ -1,3 +1,4 @@
+import { revalidatePath } from 'next/cache'
 import About from '@/components/About'
 import Banner from '@/components/Banner'
 import Nav from '@/components/Nav'
@@ -7,9 +8,11 @@ import { Project } from '@/src/types'
 import Contact from '@/components/Contact'
 import Loader from '@/components/Loader'
 import SocialMedia from '@/components/SocialMedia'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 
-export default async function  Home() {
+export default async function Home() {
+
+  revalidatePath('/', 'page')
   const projectsData: Project[] = await getAllProjects();
 
   return (

@@ -1,5 +1,5 @@
 export default async function getAllProjects() {
-    const res = await fetch('https://wp.conradarchitect.com/wp-json/wp/v2/projects');
+    const res = await fetch('https://wp.conradarchitect.com/wp-json/wp/v2/projects/?per_page=100');
     const data:any = await res.json();
 
     const result = data.map((project: any) => {
@@ -19,7 +19,6 @@ export default async function getAllProjects() {
             )
         }
     });
-
 
     if (!res.ok) {
         throw new Error('Failed to fetch data')

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Project } from '@/src/types';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions'
 
 type Props = {
     projects: Project[]
 }
 
 const GalleryPageComponent = ({ projects }:any) => {
-
-
     return (
         <div className=''>
             {

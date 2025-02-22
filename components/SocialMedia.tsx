@@ -44,7 +44,7 @@ const SocialMedia = ({ projects }: Props) => {
                     <span className={'h-[1px] w-[180px] bg-black ml-3 md:block hidden '} />
                 </div>
             </div>
-            <div className='grid md:grid-cols-3 grid-cols-2 gap-1'>
+ {/*            <div className='grid md:grid-cols-3 grid-cols-2 gap-1'>
                 <div className='relative h-[350px]'>
                     <Image
                         src={projects[5].images[0].full_image_url}
@@ -105,7 +105,7 @@ const SocialMedia = ({ projects }: Props) => {
                         className="object-cover w-full"
                     />
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 };

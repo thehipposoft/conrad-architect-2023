@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form } from './Form';
 
 const Contact = () => {
     return (
@@ -7,20 +8,35 @@ const Contact = () => {
                 <div className='flex justify-center items-center md:border-r-[1px] border-b-[1px] md:border-b-0 border-[#6F6F6F] md:w-1/3 w-[50vw] md:h-[300px]'>
                     <h1 className='letter pb-6'>CONTACT</h1>
                 </div>
-                <form action="" className='w-[75%] md:pl-16 pt-12 md:pt-0'>
-                    <section className='mb-4'>
-                        <input type="text" name="name" id="" placeholder='NAME' className='py-5 px-2 border-b-[1px] w-full' />
-                    </section>
-                    <section className='mb-4'>
-                        <input type="text" name="email" id="" placeholder='EMAIL' className='py-5 px-2 border-b-[1px] w-full' />
-                    </section>
-                    <section className='mb-4'>
-                        <input type="text" name="message" id="" placeholder='MESSAGE' className='py-5 px-2 border-b-[1px] w-full' />
-                    </section>
-                    <section className='text-center mt-4'>
-                        <button type="submit" name="submit" id="" className='rounded-3xl py-2 md:px-12 px-8 border-[#6F6F6F] mt-4 border-solid border-2'>SEND MESSAGE</button>
-                    </section>
-                </form>
+                <Form
+                    fields={[
+                        {
+                            name: 'name',
+                            type: 'text',
+                            label: '',
+                            placeholder: 'Name',
+                            required: true,
+                        },
+                        {
+                            name: 'customerEmail',
+                            type: 'email',
+                            label: '',
+                            placeholder: 'Email',
+                            required: true,
+                        },
+                        {
+                            name: 'message',
+                            type: 'textArea',
+                            label: '',
+                            placeholder: 'Message',
+                            required: true,
+                        },
+                    ]}
+                    onSuccessMessage={'Your message was submited succesfully. We will contact you soon.'}
+                    onErrorMessage={'Please, try again in some minutes'}
+                    submitButtonLabel={'SEND MESSAGE'}
+                    emailServiceURL={'https://thehippoapi.netlify.app/.netlify/functions/api/hipposoft-email'}
+                />
             </div>
         </div>
     );
