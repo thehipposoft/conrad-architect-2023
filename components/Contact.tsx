@@ -35,7 +35,7 @@ const Contact = () => {
                     onSuccessMessage={'Your message was submited succesfully. We will contact you soon.'}
                     onErrorMessage={'Please, try again in some minutes'}
                     submitButtonLabel={'SEND MESSAGE'}
-                    emailServiceURL={'https://thehippoapi.netlify.app/.netlify/functions/api/hipposoft-email'}
+                    emailServiceURL={'https://thehippoapi.netlify.app/.netlify/functions/api/conrad-architect-email'}
                 />
             </div>
         </div>
