@@ -36,9 +36,9 @@ export function Slider({ projectsToDisplay }:any) {
                                 <Image
                                     src={val.main_image}
                                     alt={val.title}
-                                    layout="fill"
+                                    width={670}
+                                    height={450}
                                     objectFit="cover"
-                                    quality={100}
                                     className="object-cover w-full h-full duration-1000 hover:scale-105 cursor-pointer"
                                 />
                                 <h1 className="absolute bottom-6 right-12 text-white uppercase z-20 duration-500">{val.title}</h1>

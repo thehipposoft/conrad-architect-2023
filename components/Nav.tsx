@@ -18,12 +18,12 @@ const toggleMenu = () => {
                 duration-1000 p-2 my-2  hover:bg-[#00000055] text-lg' onClick={toggleMenu}>
                     MENU
                 </button>
-                <Image 
-                    src={'/assets/images/logoblack.svg'} 
-                    alt='James Conrad Architect logo' 
-                    width={250} 
-                    height={100} 
-                    className='duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000'
+                <Image
+                    src={'/assets/images/logoblack.svg'}
+                    alt='James Conrad Architect logo'
+                    width={400}
+                    height={100}
+                    className='duration-300 animate-fade-left animate-delay-[1600ms] animate-duration-1000 max-w-[250px]'
                 />
             </div>
             <div className={`h-screen md:w-full w-screen overflow-hidden flex flex-col items-center md:fixed absolute menu opacity-0
@@ -45,16 +45,16 @@ const toggleMenu = () => {
                         </ul>
                     </nav>
                     <div className='md:hidden w-screen relative bottom-0 flex justify-center items-center h-[15vh] bg-black'>
-                        <Image 
-                            src={'/assets/images/logo_white.svg'} 
-                            alt='James Conrad Architect logo' 
-                            width={350} 
-                            height={200} 
+                        <Image
+                            src={'/assets/images/logo_white.svg'}
+                            alt='James Conrad Architect logo'
+                            width={350}
+                            height={200}
                             className=''
                         />
                     </div>
                     <div className='md:grid grid-cols-3 gap-4 hidden w-[1010px] xl:mt-0'>
-                        <div 
+                        <div
                         className='bg-slate-400 h-[600px] w-full'
                         style={{
                             backgroundImage: 'url(/assets/images/menu-1.png)',
@@ -73,7 +73,7 @@ const toggleMenu = () => {
                             backgroundImage: 'url(/assets/images/menu-3.png)',
                             backgroundPosition: 'center'
 
-                        }} 
+                        }}
                         />
                     </div>
                 </div>
