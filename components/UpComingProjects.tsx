@@ -12,7 +12,7 @@ const ProjectsComp = ({ projects }:Props) => {
     return (
         <div className='h-screen mt-20' id='projects'>
             <h1 className='md:w-[1350px] mx-auto md:pt-6 pt-[10%] text-3xl text-center md:text-left animate-fade-up'>GALLERY</h1>
-            <div className='flex justify-center md:mt-0 mt-12 animate-fade-up'>
+            <div className='flex justify-center md:mt-0 mt-12  animate-fade-up'>
                 {
                     projects.length > 0 ?
                         <Slider projectsToDisplay={projects}/>

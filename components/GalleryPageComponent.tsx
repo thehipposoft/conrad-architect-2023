@@ -14,7 +14,7 @@ const GalleryPageComponent = ({ projects }:any) => {
                     return(
                         <div 
                             key={index}
-                            className='flex md:flex-row flex-col md:justify-between md:w-[1350px] mx-auto md:mt-16 mt-10'
+                            className='flex md:flex-row flex-col md:justify-between md:w-[1350px] mx-auto md:mt-16 mt-10 animate-fade-up'
                         >
                             <div className='flex flex-col'>
                                 <Link href={`/projects/${project.id}`}>
