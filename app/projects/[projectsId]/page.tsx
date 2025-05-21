@@ -19,7 +19,7 @@ export async function generateMetadata({
       const previousImages = (await parent).openGraph?.images || [];
 
       return {
-        title: `Conrad Architect | ${project.title} `,
+        title: `Conrad Architects | ${project.title} `,
         openGraph: {
           images: [
             project.main_image,

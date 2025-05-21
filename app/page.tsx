@@ -9,6 +9,12 @@ import Contact from '@/components/Contact'
 import Loader from '@/components/Loader'
 import SocialMedia from '@/components/SocialMedia'
 import { Link } from 'next-view-transitions'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Conrad Architects | Home',
+  description: "“The combination of experience and highly personalized service allows JCA provide a full array of services to clients wanting to build their dream home.”",
+}
 
 export default async function Home() {
 

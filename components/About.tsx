@@ -1,27 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { AboutSlider } from './AboutSlider';
-
-const ABOUT_DATA = [
-    {
-        id: 1,
-        image: '/assets/images/jim.png',
-        text: '“The combination of experience and highly personalized service allows JCA provide a full array of services to clients wanting to build their dream home.”',
-        name: 'James Conrad, Founder.'
-    },
-    {
-        id: 2,
-        image: '/assets/images/jim.png',
-        text: 'Text 2',
-        name: 'Member 2'
-    },
-    {
-        id: 3,
-        image: '/assets/images/jim.png',
-        text: 'Text 3',
-        name: 'Member 3'
-    },
-]
 
 const About = () => {
     return (
@@ -33,7 +11,7 @@ const About = () => {
                 >
                     <Image src={'/assets/images/jim.png'} alt='Jim Conrad Photo' width={280} height={250} />
                     <p className='text-white pt-8 mt-2 md:mt-0 px-14 md:px-0 md:w-[500px] w-screen text-center'>“The combination of experience and highly personalized service allows JCA provide a full array of services to clients wanting to build their dream home.”</p>
-                    <p className='text-white pt-4'>James Conrad, Founder.</p>
+                    <p className='text-white pt-4 text-2xl font-bold md:text-xl'>James Conrad, Founder.</p>
                 </div>
             </div>
         </div>

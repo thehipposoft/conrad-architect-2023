@@ -3,6 +3,12 @@ import GalleryPageComponent from "@/components/GalleryPageComponent";
 import getAllProjects from '@/API/getAllProjects'
 import { Project } from "@/src/types";
 import { Link } from 'next-view-transitions'
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Conrad Architects | Gallery',
+  description: "Check out our latest projects and designs. We are committed to providing the best service and quality in the industry.",
+}
 
 
 export default async function GalleryPage() {
